@@ -1,5 +1,3 @@
-
-
 $wmiBios = Get-WmiObject Win32_BIOS
 $wmiComputerSystem = Get-WmiObject Win32_ComputerSystem
 $tsenv = New-Object -COMObject Microsoft.SMS.TSEnvironment
@@ -50,7 +48,7 @@ switch($model.substring(0,4)){
 	 '10SJ' { $Model_id = 37; break } 
 	default { $Model_id = 11; break }
 }
-# Computer Name KSE#
+# Computer Name 
 $Name = (Get-WmiObject -Class Win32_ComputerSystem).Name
 
 # Computer Serial Number
@@ -60,5 +58,5 @@ $customfields = @{"serial" = $SerialNumber; "supplier_id" = 1;"purchase_cost" = 
 Import-Module -Name $env:ProgramFiles\WindowsPowerShell\Modules\SnipeitPS -Verbose
 Import-PackageProvider -Name "Nuget" -Verbose
 
-New-Asset -Name $Name -tag $Name -Model_id $Model_id -Status 2 -CustomFields $customfields -URL 'https://kse.snipe-it.io/' -apikey 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImEzYzVlOWYwODY1ZjliZjBmMjNkMzA3ODUxY2FkZDRjYmVkOGUyM2MwMzE4M2YyZjY3NmUyMmVjZjc0YTJkMzA4ODBmMjQ2YmY4MWY5NjQ3In0.eyJhdWQiOiIxIiwianRpIjoiYTNjNWU5ZjA4NjVmOWJmMGYyM2QzMDc4NTFjYWRkNGNiZWQ4ZTIzYzAzMTgzZjJmNjc2ZTIyZWNmNzRhMmQzMDg4MGYyNDZiZjgxZjk2NDciLCJpYXQiOjE1NjMzNzk0MzksIm5iZiI6MTU2MzM3OTQzOSwiZXhwIjoxNTk1MDAxODM5LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.VHwIaVbKHvjqKCTXFafvXNxKSooypq4RhIvJV8jR9Z1bAq4B7WrBmr_2YiyYjHr6Q6z5XEdF6x1XR6zvjtvGf14xvgiv8wfimOqWsm4FDaV-rvDjH7o0sfbgpjJ3wwZ0EL_0PqVBSMDJQEDsH3fmIGKbbp0misJgIJL1IzBhSXrW09WHzbmEfppR97wM5jIyelOXwB-m2SYBazDoOV6TjgG9OTZyoVegtvmLzxianEeR_yn5ywbXVzRVBNs9sEhdwX808UOgtRIJSVjiKY_VGDdQvcj4rdsxz72nhWZbIrhWByavM7zFej7hDu1xzv2jueRuzriIl_nabQdvEIy4-PvwieZVvXgAnwLVoZefEIc2si2g4yqRdv8FX8ustA2HUvQomUeXkbT32ihZxSS8dkbyzvEpBFk14UBWuc8TJN7kLDsbaJMvDrThwqBQs8dOZFTMG63m1qrp653e85SOQGzzI6oBdSZv1KDw_6VSx4t3wH0QWvx1E57KBJ1_epshekDqI5w9KR2x2D_EBXkX7G0f5PPZo03DMhPxo8TdUUuOo1Qh9TW-884GqW3ksswlLxy5cpgH6fCzixq_uqua5wwMv00GV14qLS-JyA3z8CaNqJjQ3GGy9Fp29pSiKho5PVLjW0-GQk3MNHNKn6NvOwLY7zNgLk8f6JSOpB9edsI'
+New-Asset -Name $Name -tag $Name -Model_id $Model_id -Status 2 -CustomFields $customfields -URL 'SNIPEITURL' -apikey 'YOUR API KEY'
 
