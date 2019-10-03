@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<p><a href="https://github.com/snazy2000/snipeitps/releases/latest"><img src="https://img.shields.io/github/release/snazy2000/SnipeitPS.svg" alt="GitHub release" /></a> <a href="https://ci.appveyor.com/project/snazy2000/snipeitps/branch/master"><img src="https://ci.appveyor.com/api/projects/status/dvuw4ggx543nx3h7/branch/master?svg=true" alt="Build status" /></a> <a href="https://www.powershellgallery.com/packages/snipeitps"><img src="https://img.shields.io/powershellgallery/dt/snipeitps.svg" alt="PowerShell Gallery" /></a> <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License" /></p>
+<hr />
+<h2 id="want-to-say-thanks">Want to say thanks?</h2>
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=XP29MAD7P3WDN&amp;source=url"><img src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" alt="paypal" /></a></p>
+<h2 id="instructions">Instructions</h2>
+<h3 id="installation">Installation</h3>
+<p>Install SnipeitPS from the PowerShell Gallery <code>Install-Module</code> requires PowerShellGet (included in PS v5, or download for v3/v4 via the gallery link)</p>
+<pre class="powershell"><code># One time only install: (requires an admin PowerShell window)
+Install-Module SnipeitPS
+
+# Check for updates occasionally:
+Update-Module SnipeitPS
+
+# To use each session:
+Import-Module SnipeitPS
+Set-Info -URL &#39;https://asset.example.com&#39; -apiKey &#39;tokenKey&#39;</code></pre>
+<h3 id="usage">Usage</h3>
+<pre class="powershell"><code># Review the help at any time!
+Get-Help about_SnipeitPS
+Get-Command -Module SnipeitPS
+Get-Help Get-Asset -Full   # or any other command</code></pre>
+</body>
+</html>
